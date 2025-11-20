@@ -64,7 +64,7 @@ aside:hover {
 }
 
 nav {
-    display: none; /* flex */
+    display: none;
     justify-content: space-around;
     align-items: center;
     height: 28px;
@@ -101,6 +101,7 @@ section {
     margin-bottom: 50px;
     padding: 30px;
     padding-bottom: 6px;
+    z-index: 1;
 }
 
 article {
@@ -156,13 +157,16 @@ article {
 }
 
 .act, .sub {
+    width: auto;
+    max-width: 90%;
+    overflow-wrap: break-word;
     font: italic 600 18px 'Jost', sans-serif;
     text-shadow: 1px 1px 0px #000000c0;
     transition: .2s ease-in-out;
     margin: 2px 0 -3px;
 }
 
-.act:hover, .sub:hover {
+.act:hover, .sub:hover, .hieact:hover {
     cursor: pointer;
     font-size: 19px;
     filter: brightness(135%);
@@ -181,7 +185,6 @@ article {
 
 .sub:hover {font-size: 1.05rem;}
 
-
     /* Acts */
 .func, .meth {color: var(--func);}
 
@@ -194,6 +197,12 @@ article {
 .tag {color: var(--tag);}
 
         /* Hierarchy */
+@media (max-width: 600px) {
+    .hide {
+        display: none;
+    }
+}
+
 .hierarchy {
     color: var(--obj-model);
     display: flex;
@@ -220,12 +229,23 @@ article {
     align-items: center;
     gap: 10px;
 }
+
+.hieact {
+    width: auto;
+    max-width: 100%;
+    overflow-wrap: normal;
+    font: italic 600 18px 'Jost', sans-serif;
+    text-shadow: 1px 1px 0px #000000c0;
+    transition: .2s ease-in-out;
+    margin: 2px 0 -3px;
+}
         /* Hierarchy */
 
 .other {color: var(--other);}
     /* Acts */
 
 .def {
+    width: 95%;
     color: #ffffff;
     font: italic 400 14px 'Jost', sans-serif;
     text-shadow: 1px 1.5px #000000a6;
@@ -289,4 +309,41 @@ footer {
 .social img:hover {
     cursor: pointer;
     filter: invert(100%);
+}
+
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        width: 40%;
+        height: auto;
+        position: relative;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        font-size: 1rem;
+        padding: 8px 15px;
+        border-bottom: 3px solid #c17e01;
+    }
+
+    nav a:last-child {border-bottom: none;}
+
+    nav a:hover {
+        background: #c17e01;
+        text-decoration: none;
+        font-size: 105%;
+    }
+
+    aside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; 
+        cursor: pointer;
+        width: 50px;
+        height: 30px;
+        font-size: 2rem;
+    }
 }

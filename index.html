@@ -331,23 +331,23 @@
                 <h2 class="topic"><span class="star">☆</span> Other</h2>
             
                 <div class="pair hierarchy">
-                    <h3 class="hie act">window</h3>
+                    <h3 class="hie hieact">window</h3>
                     <div class="hie-row">
-                        <h3 class="hie act">[...]</h3>
-                        <h3 class="hie act">location</h3>
-                        <h3 class="hie act">document</h3>
-                        <h3 class="hie act">history</h3>
-                        <h3 class="hie act">[...]</h3>
+                        <h3 class="hie hieact hide">[...]</h3>
+                        <h3 class="hie hieact">location</h3>
+                        <h3 class="hie hieact">document</h3>
+                        <h3 class="hie hieact">history</h3>
+                        <h3 class="hie hieact hide">[...]</h3>
                     </div>
                     <div class="hie-row">
-                        <h3 class="hie act">html</h3>
+                        <h3 class="hie hieact">html</h3>
                     </div>
                     <div class="hie-row">
-                        <h3 class="hie act">head</h3>
-                        <h3 class="hie act">body</h3>
+                        <h3 class="hie hieact">head</h3>
+                        <h3 class="hie hieact">body</h3>
                     </div>
                     <div class="hie-row">
-                        <h3 class="hie act">[...]</h3>
+                        <h3 class="hie hieact">[...]</h3>
                     </div>
                 </div>
 
@@ -391,6 +391,22 @@
                 expanded = false
             }
         }
+
+        var container = document.querySelector('section'); 
+        function screenAdjustment() {
+            if (window.innerWidth <= 500) {
+                container.style.width = '100%';
+                container.style.margin = '0';
+                container.style.borderRadius = '0';
+            } else {
+                container.style.width = ''; 
+                container.style.margin = ''; 
+                container.style.borderRadius = ''; 
+            }
+        }
+
+        screenAdjustment();
+        window.addEventListener('resize', screenAdjustment);
     </script>
 </body>
 </html>
