@@ -7,7 +7,7 @@
     scrollbar-width: none;
     box-sizing: border-box;
     
-    --main: #dc8f00; /* or #c47f00 */
+    --main: #dc8f00; /* or #c47f00 or #dc8f00 */
     --func: #ffff00;
     --datatype: #8400ff;
     --op: #ff0000;
@@ -20,7 +20,7 @@
     --star: #3aff1c;
 }
 
-body {background: linear-gradient(to bottom, #fff200, #ff5e00) fixed;}
+body {background: linear-gradient(to bottom, #ffd900, #ff5e00) fixed;} /* #fff200 */
 
 header {text-align: center;}
 
@@ -45,14 +45,17 @@ main {
 }
 
 aside {
-    width: 25px;
-    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    width: 33px;
+    height: 25px;
     background: var(--main);
     border: #00000032 2px solid;
     border-bottom: none;
     border-radius: 8px 8px 0 0;
     color: #700;
-    text-align: center;
     font-weight: bold;
     line-height: 20px;
     box-shadow: 2px 2px 1px #00000066;
@@ -64,17 +67,15 @@ aside:hover {
 }
 
 nav {
-    display: none;
+    display: flex;
     justify-content: space-around;
-    align-items: center;
-    height: 28px;
+    height: 30px;
     width: 60%;
     background: var(--main);
     border: #00000032 2px solid;
     border-bottom: none;
     border-radius: 6px 6px 0 0;
     box-shadow: 4px 4px 1px #00000066;
-
 }
 
 nav a, #to-top {
@@ -85,7 +86,19 @@ nav a, #to-top {
     text-shadow: 0px 1.5px 0px #00000066;
 }
 
-nav a:hover, #to-top:hover {text-decoration: underline;}
+nav a {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a:hover {
+    background-color: #c17e01;
+    font-size: 70%;
+}
+
+#to-top:hover {text-decoration: underline;}
 
 section {
     width: 70%;
@@ -337,9 +350,6 @@ footer {
     }
 
     aside {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         position: relative; 
         cursor: pointer;
         width: 50px;

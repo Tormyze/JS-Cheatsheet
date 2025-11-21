@@ -13,7 +13,7 @@
     </header>
 
     <main>
-        <aside>&blacktriangle;</aside>
+        <aside>&blacktriangledown;</aside>
         <nav>
             <a href="#commands">Commands</a>
             <a href="#methods">Methods</a>
@@ -379,7 +379,7 @@
         var nav = document.querySelector('nav')
         aside.addEventListener('click', expand)
 
-        var expanded = false
+        var expanded = true
         function expand(a){
             if (!expanded){
                 aside.innerHTML = '&blacktriangledown;'
