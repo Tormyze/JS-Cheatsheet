@@ -1,16 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Elms Sans', sans-serif;
-    scrollbar-width: none;
-    box-sizing: border-box;
-    
+:root {
     --main: #dc8f00; /* or #c47f00 or #dc8f00 */
+
     --func: #ffff00;
     --datatype: #8400ff;
     --op: #ff0000;
+    --strc: #cb16a1;
     --event: #3aff1c;
     --tag: #00eeff;
     --other: #cb2525;
@@ -18,6 +14,14 @@
     --obj-model: #00f7ff;
     --sub-act: #c8ff00;
     --star: #3aff1c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Elms Sans', sans-serif;
+    scrollbar-width: none;
+    box-sizing: border-box;
 }
 
 body {background: linear-gradient(to bottom, #ffd900, #ff5e00) fixed;} /* #fff200 */
@@ -59,6 +63,7 @@ aside {
     font-weight: bold;
     line-height: 20px;
     box-shadow: 2px 2px 1px #00000066;
+    transition: .1s ease-in-out;
 }
 
 aside:hover {
@@ -68,8 +73,9 @@ aside:hover {
 
 nav {
     display: flex;
-    justify-content: space-around;
-    height: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
     width: 60%;
     background: var(--main);
     border: #00000032 2px solid;
@@ -87,10 +93,11 @@ nav a, #to-top {
 }
 
 nav a {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-basis: calc(100% / 6); 
+    flex-grow: 1;
+    padding: 6px;
+    border: 1px #c17e01 solid;
+    transition: .1s ease-in-out;
 }
 
 nav a:hover {
@@ -207,15 +214,11 @@ article {
 
 .event {color: var(--event);}
 
+.strc {color: var(--strc);}
+
 .tag {color: var(--tag);}
 
         /* Hierarchy */
-@media (max-width: 600px) {
-    .hide {
-        display: none;
-    }
-}
-
 .hierarchy {
     color: var(--obj-model);
     display: flex;
@@ -306,6 +309,7 @@ footer {
 .credit:hover {text-decoration: underline;}
 
 .social {
+    list-style-type: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -326,10 +330,15 @@ footer {
 
 
 @media (max-width: 600px) {
+    .hide {
+        display: none;
+    }
+}
+
+@media (max-width: 740px) {
     nav {
-        flex-direction: column;
         width: 40%;
-        height: auto;
+        flex-direction: column;
         position: relative;
     }
 
@@ -350,8 +359,6 @@ footer {
     }
 
     aside {
-        position: relative; 
-        cursor: pointer;
         width: 50px;
         height: 30px;
         font-size: 2rem;

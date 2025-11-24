@@ -19,12 +19,18 @@
             <a href="#methods">Methods</a>
             <a href="#datatypes">Data Types</a>
             <a href="#operators">Operators</a>
+            <a href="#structures">Structures</a>
             <a href="#events">Events</a>
             <a href="#other">Other</a>
         </nav>
         <section>
             <article id="commands">
                 <h2 class="topic"><span class="star">☆</span> Commands</h2>
+
+                <div class="pair">
+                    <h3 class="act func">console.log(" ")</h3>
+                    <p class="def">- shows content in the console</p>
+                </div>
             
                 <div class="pair">
                     <h3 class="act func">alert(" ")</h3>
@@ -267,6 +273,24 @@
                 </div>
             </article>
 
+            <article id="structures">
+                <h2 class="topic"><span class="star">☆</span> Structures</h2>
+
+                <div class="pair">
+                    <h3 class="act strc">Conditional</h3>
+                    
+                    <div class="sub-acts">
+                        <h4 class="sub">if (<span class="var">test</span>) {
+                        <p class="def">- condition</p>
+                        <p class="def">- executes if it's True</p>
+                        }</h4> <h4 class="sub">else {
+                        <p class="def">- multiple conditions</p>
+                        <p class="def">- executes if it's False</p>
+                        }</h4>
+                    </div>
+                </div>
+            </article>
+
             <article id="events">
                 <h2 class="topic"><span class="star">☆</span> Events</h2>
 
@@ -365,10 +389,10 @@
         <p class="foot">&copy; Tormyze</p>
 
         <ul class="social">
-            <a href="https://github.com/Tormyze" target="_blank"><img src="img/logo-github.svg" alt="Logo GitHub" id="github"></img></a>
-            <a href="https://www.instagram.com/tormyze" target="_blank"><img src="img/logo-instagram.svg" alt="Logo Instagram" id="instagram"></img></a>
-            <a href="https://www.youtube.com/@tormyze" target="_blank"><img src="img/logo-youtube.svg" alt="Logo YouTube" id="youtube"></img></a>
-            <a href="https://www.linkedin.com/in/paulojr-tormyze" target="_blank"><img src="img/logo-linkedin.svg" alt="Logo LinkedIn" id="linkedin"></img></a>
+            <li><a href="https://github.com/Tormyze" target="_blank"><img src="img/logo-github.svg" alt="Logo GitHub" id="github"></img></a></li>
+            <li><a href="https://www.instagram.com/tormyze" target="_blank"><img src="img/logo-instagram.svg" alt="Logo Instagram" id="instagram"></img></a></li>
+            <li><a href="https://www.youtube.com/@tormyze" target="_blank"><img src="img/logo-youtube.svg" alt="Logo YouTube" id="youtube"></img></a></li>
+            <li><a href="https://www.linkedin.com/in/paulojr-tormyze" target="_blank"><img src="img/logo-linkedin.svg" alt="Logo LinkedIn" id="linkedin"></img></a></li>
         </ul>
 
         <a class="credit" href="https://www.flaticon.com/br/icones-gratis/javascript" title="javascript ícones">Javascript favicon criado por Freepik - Flaticon</a>
@@ -392,16 +416,16 @@
             }
         }
 
-        var container = document.querySelector('section'); 
+        var section = document.querySelector('section'); 
         function screenAdjustment() {
             if (window.innerWidth <= 500) {
-                container.style.width = '100%';
-                container.style.margin = '0';
-                container.style.borderRadius = '0';
+                section.style.width = '100%';
+                section.style.margin = '0';
+                section.style.borderRadius = '0';
             } else {
-                container.style.width = ''; 
-                container.style.margin = ''; 
-                container.style.borderRadius = ''; 
+                section.style.width = ''; 
+                section.style.margin = ''; 
+                section.style.borderRadius = ''; 
             }
         }
 
