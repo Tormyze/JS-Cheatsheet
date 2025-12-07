@@ -214,6 +214,7 @@ article {
 
 .event {color: var(--event);}
 
+#structures .pair {margin-bottom: 15px;}
 .strc {color: var(--strc);}
 
 .tag {color: var(--tag);}

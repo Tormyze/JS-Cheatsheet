@@ -67,8 +67,13 @@
                 </div>
 
                 <div class="pair">
-                    <h3 class="act func">write(" ")</h3>
+                    <h3 class="act func"><span class="var">document</span>.write(" ")</h3>
                     <p class="def">- inserts a string in the document</p>
+                </div>
+
+                <div class="pair">
+                    <h3 class="act func"><span class="var">document</span>.createElement("<span class="var">tag</span>")</h3>
+                    <p class="def">- creates a new HTML element</p>
                 </div>
             </article>
 
@@ -76,8 +81,8 @@
                 <h2 class="topic"><span class="star">☆</span> Methods</h2>
 
                 <div class="pair">
-                    <h3 class="act meth"><span class="var">var</span>.length</h3>
-                    <p class="def">- shows the element's length</p>
+                    <h3 class="act meth"><span class="var">var</span>.trim( )</h3>
+                    <p class="def">- cuts both leading and trailing whitespace</p>
                 </div>
 
                 <div class="pair">
@@ -101,7 +106,7 @@
                 </div>
 
                 <div class="pair">
-                    <h3 class="act meth"><span class="var">var</span>.get</h3>
+                    <h3 class="act meth"><span class="var">document</span>.get</h3>
                     <p class="def">- calls an element (or more) by some property</p>
                     <div class="sub-acts">
                         <h4 class="sub">.getElementsByTagName("<span class="var">tag</span>")<span class="var">[int]</span></h4>
@@ -119,6 +124,62 @@
                         <p class="def">- calls by the element itself</p>
                         <p class="def">- <span class="sub" style="font-size: inherit;">("<span class="var">element</span>.<span class="var">class</span>")</span> calls with a class</p>
                         <p class="def">- <span class="sub" style="font-size: inherit;">("<span class="var">element</span>#<span class="var">id</span>")</span> calls with an id</p>
+                    </div>
+                </div>
+
+                <div class="pair">
+                    <h3 class="act meth"><span class="var">parentVar</span>.appendChild(<span class="var">var</span>)</h3>
+                    <p class="def">- inserts or repositions an element inside the parent element</p>
+                    <p class="def">- usually used right after creating a new node</p>
+                </div>
+
+                <div class="pair hr">
+                    <h3 class="act meth"><span class="var">var</span>.setAttribute('<span class="var">atr</span>', '<span class="var">value</span>')</h3>
+                    <p class="def">- adds an attribute and it's value to an element</p>
+                </div>
+
+                <div class="pair hr">
+                    <h3 class="act var">Arrays</h3>
+
+                    <div class="sub-acts">
+                        <h4 class="sub meth"><span class="var">array</span>.length</h4>
+                        <p class="def">- returns the array's length</p>
+
+                        <h4 class="sub meth"><span class="var">array</span>.sort( )</h4>
+                        <p class="def">- sorts the array in ascending order</p>
+
+                        <h4 class="sub meth"><span class="var">array</span>.push(<span class="var">x</span>)</h4>
+                        <p class="def">- inserts a new element at the end of the array</p>
+
+                        <h4 class="sub meth"><span class="var">array</span>.includes(<span class="var">x</span>)</h4>
+                        <p class="def">- returns True if the element is in the array</p>
+
+                        <h4 class="sub meth"><span class="var">array</span>.indexOf(<span class="var">x</span>)</h4>
+                        <p class="def">- returns the element's position</p>
+                        <p class="def">- if there's not the element, returns -1 (minus one)</p>
+                    </div>
+                </div>
+
+                <div class="pair">
+                    <h3 class="act var">Variables Properties</h3>
+                    <p class="def">- there're many properties you can manipulate</p>
+
+                    <div class="sub-acts">
+                        <h4 class="sub tag"><span class="var">var</span>.innerHTML</h4>
+                        <p class="def">- gets var's HTML content</p>
+
+                        <h4 class="sub tag"><span class="var">var</span>.innerText</h4>
+                        <p class="def">- gets var's text</p>
+
+                        <h4 class="sub tag"><span class="var">var</span>.value</h4>
+                        <p class="def">- gets the var's value</p>
+
+                        <h4 class="sub tag"><span class="var">var</span>.length</h4></h4>
+                        <p class="def">- gets the var's length</p>
+
+                        <h4 class="sub tag"><span class="var">var</span>.checked</h4>
+                        <p class="def">- returns True if it's checked or False if it's not</p>
+                        <p class="def">- can be used with checkbox and radio inputs</p>
                     </div>
                 </div>
             </article>
@@ -283,9 +344,46 @@
                         <h4 class="sub">if (<span class="var">test</span>) {
                         <p class="def">- condition</p>
                         <p class="def">- executes if it's True</p>
-                        }</h4> <h4 class="sub">else {
+                        } else {
                         <p class="def">- multiple conditions</p>
                         <p class="def">- executes if it's False</p>
+                        }</h4>
+                    </div>
+                </div>
+
+                <div class="pair">
+                    <h3 class="act strc">Multi Conditional</h4>
+                    <p class="def">- executes the returned value code block case or default</p>
+                    <p class="def">- always let a "break" at the end</p>
+
+                    <div class="sub-acts">
+                        <h4 class="sub">switch (<span class="var">test / calc / value</span>) {
+                        <p class="def"><span class="sub">case <span class="var">value1</span>:</span></p>
+                        <p class="def">break</p>
+                        <p class="def"><span class="sub">case <span class="var">value2</span>:</span></p>
+                        <p class="def">break</p>
+                        <p class="def"><span class="sub">case <span class="var">value3</span>:</span></p>
+                        <p class="def">break</p>
+                        <p class="def"><span class="sub">default:</span></p>
+                        <p class="def">break</p>
+                        }</h4>
+                    </div>
+                </div>
+
+                <div class="pair">
+                    <h3 class="act strc">Loops</h3>
+
+                    <div class="sub-acts">
+                        <h4 class="sub">while (<span class="var">test</span>) {
+                        <p class="def">- executes while the test is returning True</p>
+                        }</h4>
+                        <br>
+                        <h4 class="sub">do {
+                        <p class="def">- executes while the test is returning True</p>
+                        } while (<span class="var">test</span>)</h4>
+                        <br>
+                        <h4 class="sub">for (<span class="var">varInit</span>; <span class="var">varTest</span>; <span class="var">incr</span>) {
+                        <p class="def">- executes until the test's limit is reached</p>
                         }</h4>
                     </div>
                 </div>
@@ -295,9 +393,12 @@
                 <h2 class="topic"><span class="star">☆</span> Events</h2>
 
                 <div class="pair hr">
-                    <h3 class="act datatype">function <span class="var">func</span>(<span class="var">param</span>) { }</h3>
-                    <p class="def">- defines a function</p>
-                    <p class="def">- can have parameters or not</p>
+                    <h3 class="act datatype">function <span class="var">func</span>(<span class="var">param</span>) { 
+                        <p class="def">- defines a function</p>
+                        <p class="def">- can have parameters or not</p>
+                        <p class="def">- can return a value when it's suppose to</p>
+                        <p class="def"><span class="sub datatype" style="font-size: inherit;">return</span></p>
+                    }</h3>
                 </div>
 
                 <div class="pair hr">
@@ -313,6 +414,14 @@
                         <p class="def">- detects when an element is clicked</p>
                         <p class="def"><span class="sub tag" style="font-size: inherit;">onclick="<span class="var">func</span><span class="datatype">()</span>"</span> - HTML property</p>
 
+                        <h4 class="sub">dblclick</h4>
+                        <p class="def">- detects when an element is double clicked</p>
+                        <p class="def"><span class="sub tag" style="font-size: inherit;">ondblclick="<span class="var">func</span><span class="datatype">()</span>"</span> - HTML property</p>
+
+                        <h4 class="sub">contextmenu</h4>
+                        <p class="def">- detects when an element is right clicked</p>
+                        <p class="def"><span class="sub tag" style="font-size: inherit;">oncontextmenu="<span class="var">func</span><span class="datatype">()</span>"</span> - HTML property</p>
+
                         <h4 class="sub">mouseenter</h4>
                         <p class="def">- detects when the pointer enters an element</p>
                         <p class="def"><span class="sub tag" style="font-size: inherit;">onmouseenter="<span class="var">func</span><span class="datatype">()</span>"</span> - HTML property</p>
@@ -320,33 +429,20 @@
                         
                         <h4 class="sub">mousemove</h4>
                         <p class="def">- detects when the pointer moves along the element</p>
+                        <p class="def"><span class="sub tag" style="font-size: inherit;">onmousemove="<span class="var">func</span><span class="datatype">()</span>"</span> - HTML property</p>
                         
                         <h4 class="sub">mousedown</h4>
                         <p class="def">- detects when it's clicked and held</p>
+                        <p class="def"><span class="sub tag" style="font-size: inherit;">onmousedown="<span class="var">func</span><span class="datatype">()</span>"</span> - HTML property</p>
                         
                         <h4 class="sub">mouseup</h4>
                         <p class="def">- detects when it's released</p>
+                        <p class="def"><span class="sub tag" style="font-size: inherit;">onmouseup="<span class="var">func</span><span class="datatype">()</span>"</span> - HTML property</p>
                         
                         <h4 class="sub">mouseout</h4>
                         <p class="def">- detects when the pointer gets out from the element</p>
                         <p class="def"><span class="sub tag" style="font-size: inherit;">onmouseout="<span class="var">func</span><span class="datatype">()</span>"</span> - HTML property</p>
 
-                    </div>
-                </div>
-
-                <div class="pair">
-                    <h3 class="act var">Variables Interactions</h2>
-                    <p class="def">- there're many properties you can manipulate</p>
-
-                    <div class="sub-acts">
-                        <h4 class="sub tag"><span class="var">var</span>.innerHTML</h4>
-                        <p class="def">- gets var's HTML properties</p>
-
-                        <h4 class="sub tag"><span class="var">var</span>.innerText</h4>
-                        <p class="def">- gets var's text</p>
-
-                        <h4 class="sub tag"><span class="var">var</span>.value</h4>
-                        <p class="def">- gets the var's value</p>
                     </div>
                 </div>
             </article>
@@ -399,11 +495,11 @@
     </footer>
 
     <script>
-        var aside = document.querySelector('aside')
-        var nav = document.querySelector('nav')
+        let aside = document.querySelector('aside')
+        let nav = document.querySelector('nav')
         aside.addEventListener('click', expand)
 
-        var expanded = true
+        let expanded = true
         function expand(a){
             if (!expanded){
                 aside.innerHTML = '&blacktriangledown;'
@@ -416,7 +512,7 @@
             }
         }
 
-        var section = document.querySelector('section'); 
+        let section = document.querySelector('section'); 
         function screenAdjustment() {
             if (window.innerWidth <= 500) {
                 section.style.width = '100%';
