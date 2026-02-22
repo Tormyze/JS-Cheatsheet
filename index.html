@@ -30,6 +30,10 @@
                 <div class="pair">
                     <h3 class="act func">console.log(" ")</h3>
                     <p class="def">- shows content in the console</p>
+                    <div class="sub-acts">
+                        <h4 class="sub act">console.log(<span class="var">var</span>instanceOf <span class="sub class">Class</span> )</h4>
+                        <p class="def">- checks if the node is an instance of some class</p>
+                    </div>
                 </div>
             
                 <div class="pair">
@@ -53,7 +57,7 @@
                 </div>
 
                 <div class="pair">
-                    <h3 class="act func">parse</h3>
+                    <h3 class="act func">parse( )</h3>
                     <p class="def">- converts an element into another type</p>
 
                     <div class="sub-acts">
@@ -81,31 +85,6 @@
                 <h2 class="topic"><span class="star">☆</span> Methods</h2>
 
                 <div class="pair">
-                    <h3 class="act meth"><span class="var">var</span>.trim( )</h3>
-                    <p class="def">- cuts both leading and trailing whitespace</p>
-                </div>
-
-                <div class="pair">
-                    <h3 class="act meth"><span class="var">var</span>.replace("<span class="var">x</span>", "<span class="var">y</span>")</h3>
-                    <p class="def">- replaces "x" to "y"</p>
-                </div>
-
-                <div class="pair">
-                    <h3 class="act meth"><span class="var">var</span>.toUpperCase( )</h3>
-                    <p class="def">- turns a string into UPPERCASE</p>
-                </div>
-
-                <div class="pair">
-                    <h3 class="act meth"><span class="var">var</span>.toLowerCase( )</h3>
-                    <p class="def">- turns a string into lowercase</p>
-                </div>
-
-                <div class="pair">
-                    <h3 class="act meth"><span class="var">num</span>.toFixed(<span class="var">n</span>)</h3>
-                    <p class="def">- formats the number to a specified number of decimal places</p>
-                </div>
-
-                <div class="pair">
                     <h3 class="act meth"><span class="var">document</span>.get</h3>
                     <p class="def">- calls an element (or more) by some property</p>
                     <div class="sub-acts">
@@ -128,41 +107,189 @@
                 </div>
 
                 <div class="pair">
-                    <h3 class="act meth"><span class="var">parentVar</span>.appendChild(<span class="var">var</span>)</h3>
+                    <h4 class="sub meth"><span class="var">parentVar</span>.appendChild(<span class="var">var</span>)</h4>
                     <p class="def">- inserts or repositions an element inside the parent element</p>
                     <p class="def">- usually used right after creating a new node</p>
                 </div>
 
                 <div class="pair hr">
-                    <h3 class="act meth"><span class="var">var</span>.setAttribute('<span class="var">atr</span>', '<span class="var">value</span>')</h3>
+                    <h4 class="sub meth"><span class="var">var</span>.setAttribute('<span class="var">atr</span>', '<span class="var">value</span>')</h4>
                     <p class="def">- adds an attribute and it's value to an element</p>
                 </div>
+
+                <div class="pair hr">
+                    <h3 class="act var">String</h3>
+
+                    <div class="sub-acts">
+                        <h4 class="sub meth"><span class="var">var</span>.trim( )</h4>
+                        <p class="def">- cuts both leading and trailing whitespace</p>
+
+                        <h4 class="sub meth"><span class="var">var</span>.replace("<span class="var">x</span>", "<span class="var">y</span>")</h4>
+                        <p class="def">- replaces "x" to "y"</p>
+
+                        <h4 class="sub meth"><span class="var">var</span>.toUpperCase( )</h4>
+                        <p class="def">- turns a string into UPPERCASE</p>
+
+                        <h4 class="sub meth"><span class="var">var</span>.toLowerCase( )</h4>
+                        <p class="def">- turns a string into lowercase</p>
+
+                        <h4 class="sub meth"><span class="var">var</span>.repeat(<span class="var">n</span>)</h4>
+                        <p class="def">- repeats "var" [n] times</p>
+
+                        <h4 class="sub meth"><span class="var">var</span>.padStart(<span class="var">n, x</span>)</h4>
+                        <p class="def">- repeats the "x" value until the string reaches [n] characters</p>
+                        <p class="def">- starts at the beginning</p>
+
+                        <h4 class="sub meth"><span class="var">var</span>.padEnd(<span class="var">n, x</span>)</h4>
+                        <p class="def">- repeats the "x" value until the string reaches [n] characters</p>
+                        <p class="def">- starts at the end</p>
+
+                        <h4 class="sub meth"><span class="var">var</span>.split(<span class="var">" "</span>)</h4>
+                        <p class="def">- splits characters everywhere the separator " " is placed</p>
+                        <p class="def">- " " can be any other character, like " - " or " _ "</p>
+                        <p class="def">- returns all in an array</p>
+
+                        <h4 class="sub meth"><span class="var">var</span>.join(<span class="var">" "</span>)</h4>
+                        <p class="def">- joins separated characters using " " as the separator</p>
+                        <p class="def">- " " can be any other character, like " - " or " _ "</p>
+                        <p class="def">- returns all in a string</p>
+                    </div>
+                </div>
+
+                <div class="pair hr">
+                    <h3 class="act var">Number</h3>
+
+                    <div class="sub-acts">
+                        <h4 class="sub meth"><span class="var">num</span>.toFixed(<span class="var">n</span>)</h4>
+                        <p class="def">- formats the number to a specified number of decimal places</p>
+                    </div>
+                </div>
+
+                
 
                 <div class="pair hr">
                     <h3 class="act var">Arrays</h3>
 
                     <div class="sub-acts">
+                        <h4 class="sub meth"><span class="var">var</span> = [ ]</h4>
+                        <p class="def">- empty array</p>
+
+                        <h4 class="sub meth"><span class="var">const</span> [<span class="var">v1, v2, v3, ...</span>] = <span class="var">array</span></h4>
+                        <p class="def">- Destructuring</p>
+                        <p class="def">- each value here became a new "var" for each value in the array</p>
+                        <p class="def">- <span class="sub meth" style="font-size: inherit;">[<span class="var">v1: v4</span>] = array</span> - renaming the "var"</p>
+
                         <h4 class="sub meth"><span class="var">array</span>.length</h4>
                         <p class="def">- returns the array's length</p>
 
                         <h4 class="sub meth"><span class="var">array</span>.sort( )</h4>
                         <p class="def">- sorts the array in ascending order</p>
 
-                        <h4 class="sub meth"><span class="var">array</span>.push(<span class="var">x</span>)</h4>
-                        <p class="def">- inserts a new element at the end of the array</p>
+                        <h4 class="sub meth"><span class="var">array</span>.reverse( )</h4>
+                        <p class="def">- reverses the array order</p>
 
-                        <h4 class="sub meth"><span class="var">array</span>.includes(<span class="var">x</span>)</h4>
-                        <p class="def">- returns True if the element is in the array</p>
+                        <h4 class="sub meth"><span class="var">array</span>.push(<span class="var">x</span>)</h4>
+                        <p class="def">- inserts a new value at the end of the array</p>
+                        <p class="def">- <span class="sub" style="font-size: inherit;">(<span class="var">"x", "y", "z"</span>)</span> inserts many values at once</p>
+
+                        <h4 class="sub meth"><span class="var">array</span>.pop(<span class="var">x</span>)</h4>
+                        <p class="def">- removes the last value from the array</p>
+
+                        <h4 class="sub meth"><span class="var">array</span>.unshift(<span class="var">x</span>)</h4>
+                        <p class="def">- inserts a new value at the beginning of the array</p>
+                        <p class="def">- <span class="sub" style="font-size: inherit;">(<span class="var">"a", "b", "c"</span>)</span> inserts many values at once</p>
+
+                        <h4 class="sub meth"><span class="var">array</span>.shift(<span class="var">x</span>)</h4>
+                        <p class="def">- removes the first value from the array</p>
+
+                        <h4 class="sub meth"><span class="var">array</span>.concat(<span class="var">array2</span>)</h4>
+                        <p class="def">- concats the values of both the arrays</p>
+
+                        <h4 class="sub meth"><span class="var">array</span>.slice(<span class="var">n1, nn</span>)</h4>
+                        <p class="def">- returns an array with values from <span class="sub" style="font-size: inherit;">[n1]</span> to <span class="sub" style="font-size: inherit;">[nn]</span> indexes, except <span class="sub" style="font-size: inherit;">[nn]</span> itself</p>
+                        <p class="def">- <span class="sub" style="font-size: inherit;">slice(<span class="var">n</span>)</span> returns all values from <span class="sub" style="font-size: inherit;">[n]</span> index ahead</p>
 
                         <h4 class="sub meth"><span class="var">array</span>.indexOf(<span class="var">x</span>)</h4>
-                        <p class="def">- returns the element's position</p>
-                        <p class="def">- if there's not the element, returns -1 (minus one)</p>
+                        <p class="def">- returns the value's position</p>
+                        <p class="def">- returns -1 (minus one) if fails</p>
+                        
+                        <h4 class="sub meth"><span class="var">array</span>.lastIndexOf( )</h4>
+                        <p class="def">- returns the last value's position</p>
+                        <p class="def">- returns -1 (minus one) if fails</p>
+
+                        <h4 class="sub meth"><span class="var">array</span>.forEach(<span class="sub">(<span class="var">i</span>)<span class="var">=></span>{ }</span>)</h4>
+                        <p class="def">- iterates through all values in the array executing a function</p>
+                        <p class="def">- <span class="sub" style="font-size: inherit;">(</span>i<span class="sub" style="font-size: inherit;">)</span> is the value itself, as a parameter</p>
+
+                        <h4 class="sub meth"><span class="var">array</span>.includes(<span class="var">x</span>)</h4>
+                        <p class="def">- returns <span class="sub tag" style="font-size: inherit;">true</span> if the value exists in the array or <span class="sub tag" style="font-size: inherit;">false</span> otherwise</p>
+                    </div>
+                </div>
+                
+                <div class="pair hr">
+                    <h3 class="act var">Objects</h3>
+
+                    <div class="sub-acts">
+                        <h4 class="sub meth"><span class="var">var</span> = {
+                        <p class="def">key: "value",</p>
+                        <p class="def">key2: num,</p>
+                        <p class="def">key3: [ ]</p>
+                        <p class="def">key4: function( ){</p>
+                        <p class="def">}</p><br>
+                        <p class="def">- a literal object</p>
+                        }</h4>
+                    </div><br>
+
+                    <div class="sub-acts">
+                        <h4 class="sub meth"><span class="var">const</span> {<span class="var">key, key2, key3</span>} = <span class="var">obj</span></h4>
+                        <p class="def">- Destructuring</p>
+                        <p class="def">- each key became a new "var" for each key</p>
+                        <p class="def">- <span class="sub meth" style="font-size: inherit;">{<span class="var">key: key4</span>} = obj</span> - renaming the "var"</p>
+                    </div>
+
+                    <div class="sub-acts">
+                        <h4 class="sub meth"><span class="var">obj</span> = <span class="var">obj2</span></h4>
+                        <p class="def">- Mutation</p>
+                        <p class="def">- both share same keys, values and existence now</p>
+                    </div>
+
+                    <div class="sub-acts">
+                        <h4 class="sub meth">delete <span class="var">obj</span>.key</h4>
+                        <p class="def">- deletes the object's key</p>
+                    </div>
+
+                    <div class="sub-acts">
+                        <h4 class="sub meth"><span class="sub class">Object </span>.keys(<span class="var">obj</span>)</h4>
+                        <p class="def">- returns only the "obj" keys</p>
+                    </div>
+
+                    <div class="sub-acts">
+                        <h4 class="sub meth"><span class="sub class">Object </span>.entries(<span class="var">obj</span>)</h4>
+                        <p class="def">- returns arrays with the "obj" keys and values</p>
+                    </div>
+
+                    <div class="sub-acts">
+                        <h4 class="sub meth"><span class="sub class">Object </span>.assign(<span class="var">obj2, obj</span>)</h4>
+                        <p class="def">- assigns "obj" values into "obj2"</p>
+                    </div>
+
+                </div>
+                <div class="pair hr">
+                    <h3 class="act var">JSON</h3>
+                    <p class="def">- long single string with data used in FrontEnd ~ BackEnd communication</p><br>
+
+                    <div class="sub-acts">
+                        <h4 class="sub meth"><span class="sub class">JSON</span>.parse(<span class="var">json</span>)</h4>
+                        <p class="def">- converts JSON to an object</p>
+
+                        <h4 class="sub meth"><span class="sub class">JSON</span>.stringify(<span class="var">obj</span>)</h4>
+                        <p class="def">- converts an object to JSON</p>
                     </div>
                 </div>
 
                 <div class="pair">
                     <h3 class="act var">Variables Properties</h3>
-                    <p class="def">- there're many properties you can manipulate</p>
+                    <p class="def">- there're many properties you can manipulate</p><br>
 
                     <div class="sub-acts">
                         <h4 class="sub tag"><span class="var">var</span>.innerHTML</h4>
@@ -171,6 +298,9 @@
                         <h4 class="sub tag"><span class="var">var</span>.innerText</h4>
                         <p class="def">- gets var's text</p>
 
+                        <h4 class="sub tag"><span class="var">var</span>.textContent</h4>
+                        <p class="def">- gets var's text content</p>
+
                         <h4 class="sub tag"><span class="var">var</span>.value</h4>
                         <p class="def">- gets the var's value</p>
 
@@ -178,7 +308,7 @@
                         <p class="def">- gets the var's length</p>
 
                         <h4 class="sub tag"><span class="var">var</span>.checked</h4>
-                        <p class="def">- returns True if it's checked or False if it's not</p>
+                        <p class="def">- returns <span class="sub tag" style="font-size: inherit;">true</span> if it's checked or <span class="sub tag" style="font-size: inherit;">false</span> if it's not</p>
                         <p class="def">- can be used with checkbox and radio inputs</p>
                     </div>
                 </div>
@@ -193,12 +323,13 @@
                     <p class="def">- converts an element into a String</p>
                 </div>
                 
-
+                
                 <div class="pair">
                     <h3 class="act datatype">Number(<span class="var">var</span>)</h3>
+                    <p class="def"><span class="sub class">- Number</span> (class)</p>
                     <p class="def">- englobes all numeric values</p>
                     <p class="def">- converts an element into a Number</p>
-
+                    
                     <div class="sub-acts">
                         <h4 class="sub">infinity</h4>
                         <p class="def">all infinity values</p>
@@ -209,11 +340,12 @@
                 
                 <div class="pair">
                     <h3 class="act datatype">boolean</h3>
-                    <p class="def">- has only True or False</p>
+                    <p class="def">- has only <span class="sub tag" style="font-size: inherit;">true</span> or <span class="sub tag" style="font-size: inherit;">false</span></p>
                 </div>
-
+                
                 <div class="pair">
                     <h3 class="act datatype">object</h3>
+                    <p class="def"><span class="sub class">- Object</span> (class)</p>
                     <p class="def">- if it isn't any of the other data types, it is an object</p>
 
                     <div class="sub-acts">
@@ -313,12 +445,12 @@
                     <div class="sub-acts">
                         <h4 class="sub"><span class="var">test</span> && <span class="var">test</span></h4>
                         <p class="def">- conjunction</p>
-                        <p class="def">- returns True if both are True</p>
+                        <p class="def">- returns <span class="sub tag" style="font-size: inherit;">true</span> if both are <span class="sub tag" style="font-size: inherit;">true</span></p>
                     </div>
                     <div class="sub-acts">
                         <h4 class="sub"><span class="var">test</span> || <span class="var">test</span></h4>
                         <p class="def">- disjunction</p>
-                        <p class="def">- returns True if at least one of both is True</p>
+                        <p class="def">- returns <span class="sub tag" style="font-size: inherit;">true</span> if at least one of both is <span class="sub tag" style="font-size: inherit;">true</span></p>
                     </div>
                 </div>
 
@@ -327,9 +459,9 @@
 
                     <div class="sub-acts">
                         <h4 class="sub"><span class="var">test</span> ? <span class="var">[...]</span> : <span class="var">[...]</span></h4>
-                        <p class="def">- executes the True or the False path depending on the test's result</p>
-                        <p class="def">[...]<span class="sub" style="font-size: inherit;">:</span> it's the True path</p>
-                        <p class="def"><span class="sub" style="font-size: inherit;">:</span>[...] it's the False path</p>
+                        <p class="def">- executes the <span class="sub tag" style="font-size: inherit;">true</span> or the <span class="sub tag" style="font-size: inherit;">false</span> path depending on the test's result</p>
+                        <p class="def">[...]<span class="sub" style="font-size: inherit;">:</span> it's the <span class="sub tag" style="font-size: inherit;">true</span> path</p>
+                        <p class="def"><span class="sub" style="font-size: inherit;">:</span>[...] it's the <span class="sub tag" style="font-size: inherit;">false</span> path</p>
                     </div>
                 </div>
             </article>
@@ -343,10 +475,10 @@
                     <div class="sub-acts">
                         <h4 class="sub">if (<span class="var">test</span>) {
                         <p class="def">- condition</p>
-                        <p class="def">- executes if it's True</p>
+                        <p class="def">- executes if it's <span class="sub tag" style="font-size: inherit;">true</span></p>
                         } else {
                         <p class="def">- multiple conditions</p>
-                        <p class="def">- executes if it's False</p>
+                        <p class="def">- executes if it's <span class="sub tag" style="font-size: inherit;">false</span></p>
                         }</h4>
                     </div>
                 </div>
@@ -375,15 +507,23 @@
 
                     <div class="sub-acts">
                         <h4 class="sub">while (<span class="var">test</span>) {
-                        <p class="def">- executes while the test is returning True</p>
+                        <p class="def">- executes while the test is returning <span class="sub tag" style="font-size: inherit;">true</span></p>
                         }</h4>
                         <br>
+
                         <h4 class="sub">do {
-                        <p class="def">- executes while the test is returning True</p>
+                        <p class="def">- executes while the test is returning <span class="sub tag" style="font-size: inherit;">true</span></p>
                         } while (<span class="var">test</span>)</h4>
                         <br>
-                        <h4 class="sub">for (<span class="var">varInit</span>; <span class="var">varTest</span>; <span class="var">incr</span>) {
-                        <p class="def">- executes until the test's limit is reached</p>
+
+                        <h4 class="sub">for (<span class="var">let i = 0</span>; <span class="var">i &lt; arg</span>; <span class="var">i++</span>) {
+                        <p class="def">- executes until "i" reaches the argument</p>
+                        }</h4>
+                        <br>
+
+                        <h4 class="sub">for (<span class="var">i</span> of <span class="var">array</span>) {
+                        <p class="def">- iterates through all "array" values</p>
+                        <p class="def">- "i" is the value itself</p>
                         }</h4>
                     </div>
                 </div>
@@ -396,6 +536,7 @@
                     <h3 class="act datatype">function <span class="var">func</span>(<span class="var">param</span>) { 
                         <p class="def">- defines a function</p>
                         <p class="def">- can have parameters or not</p>
+                        <p class="def">- use <span class="sub datatype">...</span> on "param" for unlimited parameters</p>
                         <p class="def">- can return a value when it's suppose to</p>
                         <p class="def"><span class="sub datatype" style="font-size: inherit;">return</span></p>
                     }</h3>

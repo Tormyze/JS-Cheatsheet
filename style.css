@@ -201,11 +201,15 @@ article {
 .sub {
     color: var(--sub-act);
     font-size: 1rem;
+    margin-bottom: 0.5px;
 }
+
 
 .sub:hover {font-size: 1.05rem;}
 
-    /* Acts */
+/* Acts */
+.class {color: var(--star);}
+
 .func, .meth {color: var(--func);}
 
 .datatype {color: var(--datatype);}
